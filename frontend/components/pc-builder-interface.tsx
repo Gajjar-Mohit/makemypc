@@ -76,7 +76,7 @@ export function PCBuilderInterface() {
               <div className="p-2 bg-cyan-600 rounded-lg">
                 <Cpu className="h-6 w-6 text-white" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] bg-gray-600 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
                 MakeMyPC
               </h1>
             </div>

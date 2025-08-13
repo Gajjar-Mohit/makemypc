@@ -16,8 +16,9 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "MakeMyPC",
+  title: "PC Builder AI - Build Your Dream PC",
   description: "Tell us what you need, and we'll recommend the perfect PC components for your budget and requirements.",
+  generator: "v0.app",
 }
 
 export default function RootLayout({
