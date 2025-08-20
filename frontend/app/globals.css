@@ -4,41 +4,41 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-  --font-dm-sans: "DM Sans", sans-serif;
-  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --background: oklch(1 0 0); /* Pure white */
+  --foreground: oklch(0.35 0 0); /* Dark gray #475569 */
+  --card: oklch(0.98 0.02 195); /* Light cyan #ecfeff */
+  --card-foreground: oklch(0.35 0 0); /* Dark gray */
+  --popover: oklch(1 0 0); /* Pure white */
+  --popover-foreground: oklch(0.35 0 0); /* Dark gray */
+  --primary: oklch(0.35 0.08 200); /* Cyan-800 #164e63 */
+  --primary-foreground: oklch(1 0 0); /* White */
+  --secondary: oklch(0.98 0.02 195); /* Light cyan */
+  --secondary-foreground: oklch(0.35 0 0); /* Dark gray */
+  --muted: oklch(0.99 0.01 120); /* Light green tint #f0fdf4 */
+  --muted-foreground: oklch(0.3 0 0); /* Darker gray #374151 */
+  --accent: oklch(0.75 0.15 120); /* Bright green #84cc16 */
+  --accent-foreground: oklch(0.35 0.08 200); /* Primary color */
+  --destructive: oklch(0.6 0.2 35); /* Orange for errors #ea580c */
+  --destructive-foreground: oklch(1 0 0); /* White */
+  --border: oklch(0.35 0 0); /* Dark gray */
+  --input: oklch(0.98 0.02 195); /* Light cyan */
+  --ring: oklch(0.75 0.15 120); /* Bright green */
+  --chart-1: oklch(0.6 0.2 35); /* Orange */
+  --chart-2: oklch(0.5 0.15 140); /* Green */
+  --chart-3: oklch(0.35 0.08 200); /* Primary cyan */
+  --chart-4: oklch(0.65 0.18 50); /* Orange variant */
+  --chart-5: oklch(0.75 0.15 120); /* Accent green */
+  --radius: 0.5rem;
+  --sidebar: oklch(0.35 0.08 200); /* Primary cyan */
+  --sidebar-foreground: oklch(1 0 0); /* White */
+  --sidebar-primary: oklch(0.98 0.02 195); /* Light cyan */
+  --sidebar-primary-foreground: oklch(0.35 0 0); /* Dark gray */
+  --sidebar-accent: oklch(0.75 0.15 120); /* Bright green */
+  --sidebar-accent-foreground: oklch(0.35 0.08 200); /* Primary cyan */
+  --sidebar-border: oklch(0.35 0 0); /* Dark gray */
+  --sidebar-ring: oklch(0.75 0.15 120); /* Bright green */
+  --font-geist: "Geist", sans-serif;
+  --font-manrope: "Manrope", serif;
 }
 
 .dark {
@@ -74,9 +74,16 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+  --font-geist: "Geist", sans-serif;
+  --font-manrope: "Manrope", serif;
 }
 
 @theme inline {
+  /* Updated font configuration to use Geist and Manrope */
+  --font-sans: var(--font-geist);
+  --font-serif: var(--font-manrope);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -113,8 +120,6 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --font-sans: var(--font-dm-sans);
-  --font-heading: var(--font-space-grotesk);
 }
 
 @layer base {
@@ -122,6 +127,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }

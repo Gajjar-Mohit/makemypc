@@ -1,24 +1,25 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Space_Grotesk, DM_Sans } from "next/font/google"
+import { Geist } from "next/font/google"
+import { Manrope } from "next/font/google"
 import "./globals.css"
 
-const spaceGrotesk = Space_Grotesk({
+const geist = Geist({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-space-grotesk",
+  variable: "--font-geist",
 })
 
-const dmSans = DM_Sans({
+const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-dm-sans",
+  variable: "--font-manrope",
 })
 
 export const metadata: Metadata = {
-  title: "MakeMyPC",
-  description: "Tell us what you need, and we'll recommend the perfect PC components for your budget and requirements.",
-
+  title: "MakeMyPC - AI PC Build Assistant",
+  description: "Get personalized PC build recommendations powered by AI",
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -27,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable} antialiased`}>
-      <body className="font-sans bg-white">{children}</body>
+    <html lang="en" className={`${geist.variable} ${manrope.variable} antialiased`}>
+      <body>{children}</body>
     </html>
   )
 }
